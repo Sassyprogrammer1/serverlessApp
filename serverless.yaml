@@ -1,38 +1,18 @@
-# service: BackupAppLambdaCalledTest
-# AWSTemplateFormatVersion: "2010-09-09"
-# Transform: "AWS::Serverless-2016-10-31"
-# Description: An AWS Serverless Specification template describing your function.
-# Resources:
-#   BackupAppLambdaCalled:
-#     Type: "AWS::Serverless::Function"
-#     Properties:
-#       Handler: index.handler
-#       Runtime: nodejs12.x
-#       CodeUri: .
-#       Description: ""
-#       MemorySize: 128
-#       Timeout: 3
-#       Role: >-
-#         arn:aws:iam::443202979295:role/service-role/BackupAppLambdaCalled-role-okuntcp4
-#       Events:
-#         SNS1:
-#           Type: SNS
-#           Properties:
-#             Topic:
-#               Ref: SNSTopic1
-#   SNSTopic1:
-#     Type: "AWS::SNS::Topic"
 
-service: VideoResizeLambda
+service: videoThumbnailGenerator
 provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  region: us-east-1
+  region: us-east-2
   memorySize: 128
+  
+plugins:
+  - serverless-offline
+
 functions:
-  app:
-    handler: index.handler
+  ThumbnailGenerator:
+    handler: index.handler    
 #  Role: >-
 #         arn:aws:iam::443202979295:role/service-role/BackupAppLambdaCalled-role-okuntcp4
 #       Events:

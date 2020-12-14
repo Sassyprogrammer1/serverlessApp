@@ -11,13 +11,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.0.20",
-    "@ffmpeg-installer/linux-x64": "^4.1.0",
     "all": "0.0.0",
-    "fluent-ffmpeg": "^2.1.2"
+    "aws-sdk": "^2.802.0",
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "install": "^0.13.0",
+    "serverless-http": "^2.6.0",
+    "slspress": "^2.2.5",
+    "tempfile": "^3.0.0"
   },
   "devDependencies": {
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "serverless-offline": "^6.8.0"
   },
   "description": ""
 }
